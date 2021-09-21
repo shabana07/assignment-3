@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-3</title>
+</head>
+
+<body>
+    <div class="second-counter"></div>
+</body>
+<script>
+//write a program which shows the couter after each second.
+
+    let seconds = 0;
+    let el = document.getElementById('seconds-counter');
+    function incrementSeconds() {
+        seconds += 1;
+        console.log("You have been here for " + seconds + " seconds.");
+    }
+    let cancel = setInterval(incrementSeconds, 1000);
+
+// write a function which takes your name and displays the greeting with your name
+
+    greet = () => {
+        let firstName = prompt("Enter your first name");
+        let lastName = prompt("Enter your last name");
+        let fullName = firstName + lastName;
+        alert(" Hey ! " + fullName + " How are you ?");
+    }
+    greet();
+
+// write a function(arrow function) which takes two values and return its
+// sum as a result.
+
+    let x = +prompt("Enter first number");
+    let y = +prompt("Enter second number");
+    arrowFunc = (a, b) => console.log(a + b);
+    arrowFunc(x, y);
+
+//write a function(arrow function) which takes a number and multiply it  with 0.5 
+//and return the new value. print the new value outside the function
+
+    let z = +prompt("Enter first number");
+    let l = +prompt("Enter second number");
+    x = () => { return z * l }
+    let i = x();
+    console.log(i);
+
+//print simple array of [1,2,3,4,5] with the help of array map funtion
+
+    let numbers = [1, 2, 3, 4, 5];
+    console.log(numbers.map(Math.sqrt));
+
+// let arr = [{id:1,name:"abc"},{id:1,name:"efg"},
+// {id:2,name:"hij"},{id:3,name:"xyz"}]
+
+    let arr = [
+     { id: 1, name: "Soha", qual:"BS" },
+    { id: 1, name: "Qirrat", qual: "Inter" },
+            { id: 2, name: "Anaya", qual: "Matric" },
+            { id: 3, name: "Shabana", qual: "BS" }
+        ]
+        arr.map((x)=>{
+        if(x.qual == "BS"){
+          console.log(x.name)
+        }
+     })
+
+// iterate the given array through map function and print the name and id
+
+    let arr = [{ name: "Soha", id: "14" }]
+    let array = arr.map(arry => {
+        return arry
+    })
+
+    console.log(arr)
+
+</script>
+</html>
